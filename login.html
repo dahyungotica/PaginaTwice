@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Agregamos Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url('https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+    }
+
+    /* Estilo personalizado para el formulario */
+    #login-form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8); /* Fondo ligeramente transparente */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%; /* Hacemos el botón del mismo ancho que el formulario */
+    }
+    #carousel-container {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Acerca de</a>
+    <a href="#">Contacto</a>
+  </nav>
+ 
+
+  <div id="login-form">
+    <h2 class="text-center mb-4">Iniciar Sesión</h2>
+    <form action="/login" method="post">
+      <div class="form-group">
+        <label for="username">Usuario:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+
+      <button type="button" onclick="login()" class="btn btn-primary">Iniciar Sesión</button>
+    </form>
+  </div>
+  <div id="carousel-container" class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://static.motor.es/fotos-noticias/2020/03/que-coche-es-rayo-mcqueen-202066150-1585635516_1.jpg" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://c4.wallpaperflare.com/wallpaper/304/698/510/lightning-mcqueen-cars-3-4k-8k-wallpaper-preview.jpg" class="d-block w-100" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images8.alphacoders.com/807/thumb-1920-807564.jpg" class="d-block w-100" alt="Imagen 3">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <!-- Agregamos Bootstrap JS y Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper-js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+    function login() {
+      var usuario = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      
+      alert("Usuario: " + usuario + ", Contraseña: " + password);
+      console.log("Mensaje desde la consola:", "Datos de inicio de sesión:", usuario, password);
+      
+      // Redirigir a la ruta local de "index.html" en la carpeta "PaginaTwice"
+      window.location.href = 'file:///Users/macbook/Desktop/mi-primer-repositorio/PaginaTwice/index.html';
+    }
+  </script>
+  
+</body>
+</html>
