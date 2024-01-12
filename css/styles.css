@@ -38,7 +38,10 @@ body {
     }
 }
 
-.bg-pink {
-    background-color: #eb92bf;
-  }
+.bg-color {
+    background-color: #dd74a9;
+}
 
+.bg-pink {
+    color: #dd74a9;
+}

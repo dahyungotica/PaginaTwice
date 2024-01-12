@@ -13,15 +13,14 @@
     <!-- ========================================== -->
     <!-- ENCABEZADO -->
     <!-- ========================================== -->
-    <header class="container-fluid bg-pink d-flex justify-content-center">
+    <header class="container-fluid bg-color d-flex justify-content-center">
         <p class="text-light mb-0 p-2 fs-6">Contactanos (+569)-7586-3777</p>
     </header>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-3" id="menu">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <span clas="text-primary fs-5 fw-bold">TwiceOnce</span>
-          </a>
+          <button id="twiceButton" class="btn bg-color text-light btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Twice
+          </button>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -37,15 +36,24 @@
                 <a class="nav-link" href="#">Contacto</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="email" placeholder="Correo Electronico" aria-label="email">
-              <button class="btn btn-primary btn-primary-outline-success" type="button">Buscar</button>
-            </form>
+    <!-- ========================================== -->
+    <!-- LOGIN -->
+    <!-- ========================================== -->
+            <div class="btn-group px-4">
+              <button id="loginButton" class="btn bg-color text-light btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Iniciar Sesión
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn bg-color text-light btn-lg" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Crear Cuenta
+              </button>
+            </div>
           </div>
         </div>
       </nav>
     <!-- ========================================== -->
-    <!-- SLIDER DE IMAGENES -->
+    <!-- CARRUSEL DE IMAGENES -->
     <!-- ========================================== -->
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
@@ -145,8 +153,13 @@
       </div>
     </section>
     <!-- ========================================== -->
-    <!-- ACERCA DE NOSOTROS -->
+    <!-- FORMULARIO -->
     <!-- ========================================== -->
+    <footer>
+      <div>
+
+      </div>
+    </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
       <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
       <script src="main.js"></script>
